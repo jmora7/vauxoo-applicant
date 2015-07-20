@@ -4,12 +4,29 @@
 --       Consider add ';' at end sentence.
 
 CREATE TABLE employee (
+	id INTEGER PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE employee_department (
+	id INTEGER PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    description VARCHAR(140)
 );
 
-CREATE TABLE employee_hobby (
+CREATE TABLE employee_department_assignation (
+	id_employee INTEGER PRIMARY KEY,
+    id_department INTEGER NOT NULL,
+    FOREIGN KEY (id_employee) REFERENCES employee ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_department) REFERENCES employee_department ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+INSERT INTO employee VALUES (1,'Jorge','Mora');
+INSERT INTO employee VALUES (2,'Barbara','Lozada');
+INSERT INTO employee VALUES (3,'Cesar','Manrique');
+INSERT INTO employee VALUES (4,'Jose','Rodriguez');
 
 -- ...
+
+
