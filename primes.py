@@ -1,4 +1,5 @@
 
+
 class PrimeClass(object):
 
     def is_prime(self, num_int):
