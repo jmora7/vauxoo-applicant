@@ -39,6 +39,31 @@ INSERT INTO employee_department_assignation VALUES (2,6);
 INSERT INTO employee_department_assignation VALUES (3,1);
 INSERT INTO employee_department_assignation VALUES (4,3);
 
+CREATE TABLE employee_hobby (
+	id INTEGER PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    description VARCHAR(140)
+);
+
+CREATE TABLE employee_hobby_relation (
+	id_employee INTEGER,
+    id_hobby INTEGER,
+    PRIMARY KEY (id_employee,id_hobby)
+);
+
+INSERT INTO employee_hobby VALUES (1,'','');
+INSERT INTO employee_hobby VALUES (2,'','');
+INSERT INTO employee_hobby VALUES (3,'','');
+
+INSERT INTO employee_hobby_relation VALUES (1,1);
+INSERT INTO employee_hobby_relation VALUES (1,2);
+INSERT INTO employee_hobby_relation VALUES (2,1);
+INSERT INTO employee_hobby_relation VALUES (2,3);
+INSERT INTO employee_hobby_relation VALUES (3,1);
+INSERT INTO employee_hobby_relation VALUES (3,2);
+INSERT INTO employee_hobby_relation VALUES (4,2);
+INSERT INTO employee_hobby_relation VALUES (4,3)
+
 -- ...
 
 
