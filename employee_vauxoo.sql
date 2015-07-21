@@ -22,5 +22,17 @@ CREATE TABLE employee_department_assignation (
     FOREIGN KEY (id_department) REFERENCES employee_department ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+CREATE TABLE employee_hobby (
+	id INTEGER PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    description VARCHAR(140)
+);
+
+CREATE TABLE employee_hobby_relation (
+	id_employee INTEGER,
+    id_hobby INTEGER,
+    PRIMARY KEY (id_employee,id_hobby)
+);
+
 
 -- ...
