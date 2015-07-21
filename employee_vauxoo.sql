@@ -22,4 +22,5 @@ CREATE TABLE employee_department_assignation (
     FOREIGN KEY (id_department) REFERENCES employee_department ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+
 -- ...
