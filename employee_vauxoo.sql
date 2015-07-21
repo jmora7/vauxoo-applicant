@@ -62,7 +62,7 @@ INSERT INTO employee_hobby_relation VALUES (2,3);
 INSERT INTO employee_hobby_relation VALUES (3,1);
 INSERT INTO employee_hobby_relation VALUES (3,2);
 INSERT INTO employee_hobby_relation VALUES (4,2);
-INSERT INTO employee_hobby_relation VALUES (4,3)
+INSERT INTO employee_hobby_relation VALUES (4,3);
 
 -- ...
 
