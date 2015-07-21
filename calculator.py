@@ -1,16 +1,10 @@
-"""
-Your module documentation here
-"""
-
 
 class CalculatorClass(object):
-    """
-    Your class documentation here
-    """
-
+    
     def sum(self, num_list):
-        """
-        Your method documentation here
-        """
-        # your sum code here
-        return "not implement yet"  # Remove this dummy line
+        
+        acum=0
+        for i in xrange(0,len(num_list)):
+			acum+=num_list[i]
+			
+        return acum
