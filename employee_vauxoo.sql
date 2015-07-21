@@ -5,7 +5,7 @@
 
 CREATE TABLE employee (
 	id INTEGER PRIMARY KEY,
-    first_name VARCHAR(30) NOT NULL,
+	first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL
 );
 
@@ -22,21 +22,4 @@ CREATE TABLE employee_department_assignation (
     FOREIGN KEY (id_department) REFERENCES employee_department ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO employee VALUES (1,'Jorge','Mora');
-INSERT INTO employee VALUES (2,'Barbara','Lozada');
-INSERT INTO employee VALUES (3,'Cesar','Manrique');
-INSERT INTO employee VALUES (4,'Jose','Rodriguez');
-
 -- ...
-
-CREATE TABLE employee_hobby (
-	id INTEGER PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
-    description VARCHAR(140)
-);
-
-CREATE TABLE employee_hobby_relation (
-	id_employee INTEGER,
-    id_hobby INTEGER,
-    PRIMARY KEY (id_employee,id_hobby)
-);
