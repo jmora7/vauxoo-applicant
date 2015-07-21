@@ -22,17 +22,23 @@ CREATE TABLE employee_department_assignation (
     FOREIGN KEY (id_department) REFERENCES employee_department ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE employee_hobby (
-	id INTEGER PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
-    description VARCHAR(140)
-);
+INSERT INTO employee VALUES (1,'Jorge','Mora');
+INSERT INTO employee VALUES (2,'Barbara','Lozada');
+INSERT INTO employee VALUES (3,'Cesar','Manrique');
+INSERT INTO employee VALUES (4,'Jose','Rodriguez');
 
-CREATE TABLE employee_hobby_relation (
-	id_employee INTEGER,
-    id_hobby INTEGER,
-    PRIMARY KEY (id_employee,id_hobby)
-);
+INSERT INTO employee_department VALUES (1,'','');
+INSERT INTO employee_department VALUES (2,'','');
+INSERT INTO employee_department VALUES (3,'','');
+INSERT INTO employee_department VALUES (4,'','');
+INSERT INTO employee_department VALUES (5,'','');
+INSERT INTO employee_department VALUES (6,'','');
 
+INSERT INTO employee_department_assignation VALUES (1,1);
+INSERT INTO employee_department_assignation VALUES (2,6);
+INSERT INTO employee_department_assignation VALUES (3,1);
+INSERT INTO employee_department_assignation VALUES (4,3);
 
 -- ...
+
+
